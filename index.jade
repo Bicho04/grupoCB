@@ -1,0 +1,29 @@
+extends _layout/default
+
+block title
+	title Grupo CB
+	meta(name='description', content='LÍDER EN  GASTROENTEROLOGÍA Y ENDOSCOPÍA')
+
+block body
+	include _includes/header
+	include _includes/slide
+	//- include _includes/nav
+	main.main
+		.tab.tab-header-and-content
+			a(href="#").tab-link.is-active QUIÉNES SOMOS		
+			.tab-content
+				include _includes/quienesSomos	
+		.tab.tab-header-and-content
+			a(href="#").tab-link SERVICIOS		
+			.tab-content
+				include _includes/servicios	
+		.tab.tab-header-and-content
+			a(href="#").tab-link SEDES		
+			.tab-content
+				include _includes/sedes	
+		.tab.tab-header-and-content
+			a(href="#").tab-link CONTACTOS		
+			.tab-content
+				include _includes/contactos	
+	include _includes/footer	
+	

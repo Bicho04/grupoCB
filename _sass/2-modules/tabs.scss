@@ -1,0 +1,78 @@
+main.main {
+  $base-border-color: $color-primary !default;
+  $base-background-color: #fff !default;
+  $base-spacing: 1.5em !default;
+  $action-color: #477dca !default;
+  $dark-gray: #ddd !default;
+  $medium-screen: em(640) !default;
+  $tab-link-color: $dark-gray;
+  $tab-border: 1px solid $base-border-color;
+  $tab-active-background: $base-background-color;
+  $tab-inactive-color: $base-background-color;
+  $tab-inactive-hover-color: #c0c0c0;
+  $tab-mode: $medium-screen;
+  text-align: center;
+  @include clearfix;
+  line-height: 1.5;
+  padding: 0;
+
+  .tab-header-and-content {
+    list-style: none;
+
+    @include media($tab-mode) {
+      display: inline;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      border-top: $tab-border;
+      border-bottom: $tab-border;
+      text-align: center;
+    }
+  }
+  .tab-link {
+    background-color: $tab-inactive-color;
+    color: $tab-link-color;
+    display: block;
+    padding: ($base-spacing / 2) $gutter;
+    text-decoration: none;
+
+    @include media($tab-mode) {
+      border-top: 0;
+      display: inline-block;
+      text-align: center;
+      padding: 0 1em;
+      margin-top: 1em;
+    }
+
+    &:hover {
+      color: $action-color;
+    }
+
+    &:focus {
+      outline: none;
+      color: $action-color;
+    }
+
+    &.is-active {
+      border-bottom: 0;
+      color: $action-color;
+
+      @include media($tab-mode) {
+        // border: $tab-border;
+        // border-bottom-color: $tab-active-background;
+        margin-bottom: -1px;
+        color: $action-color;
+      }
+    }
+  }
+
+  .tab-content {
+    display: none;
+    padding: $base-spacing $gutter;
+    width: 100%;
+
+    @include media($tab-mode) {
+      // border-top: $tab-border;
+      float: left;
+    }
+  }
+}

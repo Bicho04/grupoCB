@@ -1,0 +1,16 @@
+
+mixin g-font(nombre, tamaños)
+	link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=#{nombre}:#{tamaños}')
+
+mixin img(carpeta, nombre, extencion)
+	img(src="assets/img/#{carpeta}#{nombre}.#{extencion}", alt="Grupo CB - #{nombre}")
+
+mixin doc(titulo, nombre, apellido, curriculum)
+	.doc
+		.doc-carnet: +img('', nombre ,'jpg')
+		.doc-info
+			h4.doc-infoNombre #{titulo}
+			h4.doc-infoNombre #{nombre} #{apellido}
+			a.doc-infoCurriculum(href="#{curriculum}")
+				i.fa.fa-file-text
+				| Ver currículum
