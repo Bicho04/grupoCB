@@ -14,7 +14,8 @@ html(lang='Es-Py')
     meta(name='viewport', content='width=device-width, initial-scale=1')
 
     block fuente
-      +g-font('lora','400,400italic,700')
+      +g-font('Open+Sans','400,400italic,700')
+      +g-font('PT+Sans+Narrow','400')
 
     link(rel='stylesheet', href='assets/css/main.css')
 
@@ -26,9 +27,16 @@ html(lang='Es-Py')
     <![endif]-->
 
     .wrapper
-      block body
+      include ../_includes/header
+      include ../_includes/nav
+      include ../_includes/slide
+      main.main
+        block body
+      include ../_includes/footer
     
     script(type='text/javascript',src='https://code.jquery.com/jquery-2.1.4.min.js')
     script(type='text/javascript',src='https://maps.googleapis.com/maps/api/js')
+    script(type='text/javascript',src='assets/js/jquery.colorbox-min.js')
+    script(type='text/javascript',src='assets/js/responsiveslides.min.js')
     script(type='text/javascript',src='assets/js/owl.carousel.min.js')
     script(type='text/javascript',src='assets/js/functions.min.js')

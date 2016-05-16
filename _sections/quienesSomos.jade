@@ -1,0 +1,53 @@
+section.quienesSomos
+	h2 Quiénes Somos
+	article.nosotros
+		.cont-txt
+			p Dedicado a la prevención y atención de pacientes con enfermedades digestivas, a la capacitación de especialistas - en un marco de permanente actualización tecnológica y científica -, a la formación de indicadores y normas de la especialidad - manteniendo su actividad dentro de los parámetros éticos y dignos, para los pacientes y todos los integrantes de la Institución.
+			p Tenemos un staff de profesionales altamente capacitados, que atienden pacientes de todas partes del Paraguay , por diversos motivos: desde un simple dolor abdominal hasta una enfermedad severa que necesita diagnóstico, requiere tratamiento y seguimiento especializado.
+		figure: +img('','medicos','jpg')
+
+	#logos
+		.logos-logo
+			img(src="assets/img/logos/1logo.jpg", alt="")
+			//- h2 A
+		.logos-logo
+			img(src="assets/img/logos/2logo.jpg", alt="")
+			//- h2 A
+		.logos-logo
+			img(src="assets/img/logos/3logo.jpg", alt="")
+			//- h2 A
+		.logos-logo
+			img(src="assets/img/logos/4logo.jpg", alt="")
+			//- h2 A
+		.logos-logo
+			img(src="assets/img/logos/5logo.jpg", alt="")
+			//- h2 A
+		.logos-logo
+			img(src="assets/img/logos/6logo.jpg", alt="")
+			//- h2 A
+
+	section.staff
+		section.doctores
+			h3 Director
+			.doctores-wrapper
+				+doc('Prof. Dr.','Carmelo','Blasco','assets/docs/CarmeloBlasco.pdf')
+
+		section.doctores
+			h3 STAFF MÉDICO
+			.doctores-wrapper
+				+doc('Dra.','Carolina','Miranda','#')
+				+doc('Dr.','Carlos','Galeano','#')
+				+doc('Dra.','Liliana','Ughelli','#')
+				+doc('Dr.','Juan','Antonio González','#')
+				+doc('Dr.','Raul','Núñez','#')
+				.doc
+					.doc-carnet: +img('staff/', 'Enfermeras' ,'jpg')
+					.doc-info
+						h4.doc-infoNombre.enfermeras Lic. Irene Villalba (JEFA) 
+						h4.doc-infoNombre.enfermeras Lic. Yessica Britez 
+						h4.doc-infoNombre.enfermeras Lic. Veronica Campuzano 
+						a.doc-infoCurriculum(href="#{curriculum}")
+							i.fa.fa-file-text
+							| Ver currículum
+				+doc('','Ruth','Calcena','#')
+				+doc('','Olivia','Estigarribia','#')

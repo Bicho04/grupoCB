@@ -1,64 +1,33 @@
 header
-	height: 4.5em
+	height: 7em
 	text-align: center
-	margin: 1em
+	margin: 1em auto
+	max-width: $Mwidth
+	@include display(flex)
+	@include justify-content(space-between)
+	@include align-items(center)
 	.logo
-		height: 100%
+		height: 90%
 		width: auto
 		margin: 0
+		padding: 0
 	img
 		height: 100%
-$Mwidth: 1024px
 
+	blockquote
+		max-width: 400px
+		line-height: 1.1em
+		padding: 0
+		font-size: 1.1em
+		margin: 0
+		color: $color-primary
 
-
-section.slide
-	background: $color-quaternary
-	height: 250px
-	overflow: hidden
-	.pictures
-		overflow: hidden
-		max-width: $Mwidth
-		margin: 0 auto
-	.picture
-		position: relative
-		@include media($small-screen) 
-			@include display(flex)
-		figure
-			max-height: 250px
-			margin: 0
-			padding: 0
-			width: 100%
-			@include media($small-screen) 
-				width: 60%
-			img
-				min-width: 100%
-		.cont-txt
-			position: absolute
-			bottom: 0
-			left: 0
-			background: transparentize($color-primary, 0.2)
-			color: $color-initial
-			padding: 0.5em 1.3em
-			width: 100%
-			height: auto
-			@include media($small-screen) 
-				background: $color-primary
-				position relative
-				width: 40%
-				height: 250px
-				left: initial
-				bottom: initial
-			h3 
-				color: $color-initial
-				font-size: 2rem
-				margin-bottom: 0
-			p 
-				display: none
-				font-size: 0.8em
-				@include media($small-screen) 
-					display: block
-
+section
+	text-align: left
+	font-size: 16px
+	padding-top: 3em
+	h2 
+		text-align: center
 main 
 	// max-width: $Mwidth
 	margin: auto
@@ -66,190 +35,53 @@ main
 	@include media($small-screen) 
 		font-size: 1em
 
-nav.menu
-	padding: 1em
-	text-align: center
-	ul 
+
+
+.menu
+	height: 2.5em
+	background: darken($color-quaternary,40)
+	// .nav
+	//	max-width: $Mwidth
+	// 	display: block
+	// 	width: 100%
+	// 	height: 100%
+	// 	margin: 0 auto
+	ul.nav
+		background: $color-primary
 		list-style: none
 		@include display(flex)
-		@include justify-content(center)
-		@include align-items(center)
-		border-top: 1px solid $color-primary
-		border-bottom: 1px solid $color-primary
-		padding: 0.5em 0
+		@include justify-content(space-around)
 		text-transform: uppercase
-		max-width: 500px
+		max-width: $Mwidth
+		height: 2.5em
 		margin: auto
 		li
 			margin: 0 
 			font-size: 1em
-			line-height: 1em
+			padding: 0
+			line-height: 2.5em
 			@include media($small-screen) 
 				font-size: 1em
 			a
-				padding: 0.5em
 				white-space: nowrap
+				display: block
 				color: $color-quaternary
-				@include media($small-screen) 
-					padding: 1em
+				padding: 0 0.5em
+				&:hover,&:focus,&.active
+					text-decoration: none
+					background: darken($color-primary,10)
+					color: lighten($color-secondary, 20)
 				&.active
 					color: $color-primary
-				&:hover,&:focus
-					text-decoration: none
-					color: lighten($color-primary, 20)
+
+
 
 blockquote
-	max-width: 500px
-	margin: auto
-
-section.quienesSomos
-	margin: auto
-	article.nosotros
-		padding: 1em
-		max-width: $Mwidth
-		overflow: hidden
-		margin: 3em auto
-		.cont-txt
-			font-size: 0.9em
-		figure
-			width: 100%
-			margin: 0
-			img 
-				width: 100%
-		@include media($small-screen) 
-			@include display(flex)
-			.cont-txt
-				width: 110%
-			figure
-				width: 90%
-				margin-left: 1em
-
-// section.staff
-section.doctores
-	padding: 1em 0 2em
-	text-align: center
-	overflow: hidden
-	&:nth-child(2n+1)
-		background: 
-			image: url('../img/groovepaper.png')
-			repeat: repeat
-	h3
-		text-align: center
-		text-transform: uppercase
-		font-weight: bold
-		white-space: nowrap
-		font-size: 1.7em
-		&:after,&:before
-			content: ''
-			width: 90px
-			height: 1px
-			position: relative
-			margin: 0 0.5em
-			vertical-align: middle
-			display: inline-block
-			background: $color-primary
-	.doc
-		display: inline-block
-		width: 170px
-		height: 225px
-		overflow: hidden
-		margin: 1em
-		position: relative
-		border: 1px solid $color-primary
-		&:after
-			content: ''
-			width: 100%
-			height: 100%
-			position: absolute
-			bottom: 0
-			top: 0
-			left: 0
-			right: 0
-			opacity: 1
-			transition: all 0.5s ease
-			background: transparentize($color-primary, 0.5)
-		&:hover,&:focus
-			&:after
-				// bottom: 100%
-				// left: 50%
-				// width: 0
-				height: 0
-				// top: 50%
-				// right: 100%
-			.doc-info
-				padding: 0.5em 1em 1em
-		.doc-carnet
-			img 
-				width: 100%
-		.doc-info
-			background: transparentize(invert($color-initial),0.5)
-			position: absolute
-			bottom: 0
-			left: 0
-			right: 0
-			text-align: left
-			padding: 0.5em 1em
-			transition: all 0.3s ease
-			transition-delay: 0.2s
-			h4.doc-infoNombre
-				margin: 0
-				color: $color-initial
-				line-height: 1em
-				font-size: 0.9em
-				font-weight: bold
-				text-transform: uppercase
-			a.doc-infoCurriculum
-				color: $color-initial
-				line-height: 1em
-				margin-top: 0.5em
-				font-size: 0.6em
-				display: block
-				i 
-					line-height: 1em
-					margin-top: 0
-					margin-right: 0.3em
-					font-size: 0.9em
+	max-width: 600px
+	margin: 0.5em auto 2em
+	color: #009697
 
 
-// SERVICIOS
-section.servicios
-	@include display(flex)
-	@include flex-wrap(wrap)
-	@include justify-content(space-between)
-	max-width: $Mwidth
-	margin: 0 auto
-	width: 95%
-
-	article.servicio
-		margin-bottom: 1em
-		transition: all 0.3s ease
-		@include media($small-screen) 
-			width: 49%
-		h3 
-			background: $color-primary
-			border-radius: 0 0 0.5em 0.5em
-			border-top: 5px solid $color-secondary
-			color: white
-			font-size: 1.1em
-			height: 4em
-			margin-bottom: 0
-			padding: 0.5em 1em
-			text-align: center
-			text-transform: uppercase
-			@include display(flex)
-			@include justify-content(center)
-			@include align-items(center)
-		.cont-txt
-			overflow: hidden
-			position: relative
-			padding: 1em 2em
-			top: -1px
-			height: auto
-			width: 100%
-			background: #eee
-		&.is-hidden .cont-txt
-			height: 1px
-			padding: 0 2em
 
 // SEDES
 section.sedes 
@@ -264,36 +96,124 @@ section.sedes
 		@include media($small-screen) 
 			@include display(flex)
 			@include justify-content(space-between)
-		.cont-txt
-
 		h2 
 			font-size: 1em
 			margin-bottom: 0.5em
+			font-weight: bold
+		h3 
+			font-size: 1.3em
+			margin-bottom: 0.5em
+			font-weight: bold
 		p 
 			margin: 0
 	.mapa
 		width: 320px
 		height: 150px
 		margin: 1em auto
-		background: gold
 		@include media($small-screen) 
 			margin: 0
+
+
+
+
+// MULTIMEDIA
+section.multimedia 
+	margin: 0 auto
+	max-width: $Mwidth
+	text-align: center
+	position: relative
+	h2 
+		width: 100%
+	.none
+		display: none
+
+	.galeria
+		box-sizing: border-box
+		display: inline-block
+		margin: 0.5em
+		max-height: 220px
+		max-width: 220px
+		overflow: hidden
+		position: relative
+		img 
+			height: 100%
+		&:after
+			background: transparentize($color-primary,0.8)
+			content: ''
+			height: 100%
+			left: 0
+			position: absolute
+			top: 0
+			transition: all 0.3s 
+			width: 100%
+		.contxt
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			position: absolute
+			p 
+				padding: 0.5em 1em
+				margin: 0
+				line-height: 1.2
+				font-size: 0.8em
+				text-align: left
+				background: transparentize(#222, 0.4)
+				color: #fff
+				position: absolute
+				bottom: -100%
+				transition: all 0.4s ease-out 0.1s
+		h5 
+			background: transparentize($color-primary,0.5)
+			color: #fff
+			font-size: 2em
+			margin: auto	
+			position: absolute
+			display: block
+			padding 0 1em
+			text-align: center
+			top: 60%
+			transition:all 0.3s linear
+			width: 100%
+		&:hover,&:focus
+			&:after
+				top: 100%
+			h5
+				top: 0
+				font-size: 1.7em
+			p 
+				bottom: 0
+
+
+
+
+section.slide
+	padding-top: 0
+#cboxLoadedContent
+	background: #000
+
+
+
+
+
+
 
 // CONTACTOS
 section.contactos
 	margin-bottom: 0
 	.iconos
 		@include display(flex)
-		@include justify-content(center)
+		@include justify-content(space-around)
+		max-width: 600px
+		margin: auto
 		a 
 			@include display(flex)
 			@include justify-content(center)
 			@include align-items(center)
-			margin: 2em
 			background: $color-secondary
-			border-radius: 50%
-			height: 4em
-			width: 4em 
+			border-radius: 32px
+			height: 64px
+			width: 64px
 			color: #fff
 			i
 				margin: 0

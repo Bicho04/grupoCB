@@ -1,0 +1,134 @@
+// section.staff
+section.quienesSomos
+	margin: auto
+	text-align: left
+	article.nosotros
+		padding: 1em
+		max-width: $Mwidth
+		overflow: hidden
+		margin: 3em auto
+		.cont-txt
+			font-size: 1em
+			line-height: 2em
+			text-align: justify
+		figure
+			width: 100%
+			margin: 0
+			img 
+				width: 100%
+
+		@include media($small-screen) 
+			@include display(flex)
+			.cont-txt
+				width: 100%
+				margin-right: 3em
+			figure
+				width: 90%
+	#logos
+		max-width: 1024px
+		margin: 1em auto 3em
+		// height: 80px
+		text-align: center
+		// min-width: 300px
+		// overflow: hidden
+		// background: red
+		// position: relative
+		.logos-logo
+			display: block
+			@include media($small-screen) 
+				display: inline-block
+
+
+
+
+section.doctores
+	padding: 1em 0 2em
+	text-align: center
+	overflow: hidden
+	&:nth-child(2n+1)
+		background: 
+			image: url('../img/groovepaper.png')
+			repeat: repeat
+	h3
+		text-align: center
+		text-transform: uppercase
+		font-weight: bold
+		white-space: nowrap
+		font-size: 1.8em
+		&:after,&:before
+			content: ''
+			width: 90px
+			height: 1px
+			position: relative
+			margin: 0 0.5em
+			vertical-align: middle
+			display: inline-block
+			background: $color-primary
+	.cont-txt
+		p 
+			font-family: 0.8rem
+			line-height: 1.3rem
+	.doc
+		display: inline-block
+		width: 230px
+		height: 300px
+		overflow: hidden
+		margin: 1em
+		position: relative
+		border: 1px solid $color-primary
+		&:after
+			background: transparentize($color-primary, 0.6)
+			bottom: 0
+			content: ''
+			height: 100%
+			left: 0
+			opacity: 1
+			position: absolute
+			right: 0
+			top: 0
+			transition: all 0.5s ease
+			width: 100%
+		&:hover,&:focus
+			&:after
+				// bottom: 100%
+				// left: 50%
+				// width: 0
+				height: 0
+				// top: 50%
+				// right: 100%
+			.doc-info
+				padding: 0.5em 1em 1em
+		.doc-carnet
+			img 
+				width: 100%
+		.doc-info
+			background: transparentize(invert($color-initial),0.5)
+			bottom: 0
+			left: 0
+			padding: 0.5em 1em
+			position: absolute
+			right: 0
+			text-align: left
+			transition-delay: 0.2s
+			transition: all 0.3s ease
+			h4.doc-infoNombre
+				color: $color-initial
+				font-size: 1em
+				font-family: $font-family
+				font-weight: bold
+				line-height: 1em
+				margin: 0
+				text-transform: uppercase
+				&.enfermeras
+					font-size: 0.8em
+			a.doc-infoCurriculum
+				color: $color-initial
+				line-height: 1em
+				margin-top: 0.5em
+				font-size: 0.6em
+				display: block
+				i 
+					line-height: 1em
+					margin-top: 0
+					margin-right: 0.3em
+					font-size: 0.9em

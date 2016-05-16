@@ -1,28 +1,44 @@
 $(document).ready(function() {
+  $('.servicio').addClass('is-hidden');
   $('.servicio').click(function(){
     $(this).toggleClass("is-hidden");
   });
 
-   $(".pictures").owlCarousel({
+  $(".pictures").owlCarousel({
     loop:true,
     center:true,
     nav:false,
     dots:false,
     items:1,
-    autoplay:true
+    autoplay:true,
+    autoplayHoverPause:true,
+    smartSpeed:300
+  });
+
+
+  $(".seminarios").colorbox({
+    inline:true,
+    transition:"fade",
+    Width:"50%"
    });
 
+  $("#slide1").responsiveSlides({
+    manualControls: '#slide-nav1',
+    autoplay:true,
+    speed: 0
+
+  });
+ 
 });
 
-
 $(document).ready(function () {
-  $('.main').each(function(index) {
-    $(this).children('.tab-header-and-content').first().children('a').addClass('is-active').next().addClass('is-open').show();
+  $('.accordion-tabs-minimal').each(function(index) {
+    $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
   });
-  $('.main').on('click', '.tab > a.tab-link', function(event) {
+  $('.accordion-tabs-minimal').on('click', 'li > a.tab-link', function(event) {
     if (!$(this).hasClass('is-active')) {
       event.preventDefault();
-      var accordionTabs = $(this).closest('.main');
+      var accordionTabs = $(this).closest('.accordion-tabs-minimal');
       accordionTabs.find('.is-open').removeClass('is-open').hide();
 
       $(this).next().toggleClass('is-open').toggle();
@@ -35,10 +51,11 @@ $(document).ready(function () {
 });
 
 
+
 // ########### Instituto Codas Thompson #####################
 var codasThompson = (function () {
-  var myLatlng = new google.maps.LatLng(-25.800,-54.800),
-      mapCenter = new google.maps.LatLng(-25.800,-54.800),
+  var myLatlng = new google.maps.LatLng(-25.2909323,-57.5884438),
+      mapCenter = new google.maps.LatLng(-25.2909323,-57.5884438),
       mapCanvas = document.getElementById('codasThompson'),
       mapOptions = {
         center: mapCenter,
@@ -82,8 +99,8 @@ var codasThompson = (function () {
 
 // ########### Sanatorio Britanico #####################
 var sanatorioBritanico = (function () {
-  var myLatlng = new google.maps.LatLng(-25.700,-54.700),
-      mapCenter = new google.maps.LatLng(-25.700,-54.700),
+  var myLatlng = new google.maps.LatLng(-25.2957249,-57.6329255),
+      mapCenter = new google.maps.LatLng(-25.2957249,-57.6329255),
       mapCanvas = document.getElementById('sanatorioBritanico'),
       mapOptions = {
         center: mapCenter,
@@ -127,8 +144,8 @@ var sanatorioBritanico = (function () {
 
 // ########### Consultorio Medico Genesis #####################
 var consultorioGenesis = (function () {
-  var myLatlng = new google.maps.LatLng(-25.600,-54.600),
-      mapCenter = new google.maps.LatLng(-25.600,-54.600),
+  var myLatlng = new google.maps.LatLng(-25.2937477,-57.6146018),
+      mapCenter = new google.maps.LatLng(-25.2937477,-57.6146018),
       mapCanvas = document.getElementById('consultorioGenesis'),
       mapOptions = {
         center: mapCenter,

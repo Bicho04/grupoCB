@@ -1,0 +1,52 @@
+// SERVICIOS
+section.servicios
+	@include display(flex)
+	@include flex-wrap(wrap)
+	@include justify-content(space-between)
+	max-width: $Mwidth
+	margin: 0 auto
+	width: 95%
+	
+	h2
+		text-align: center
+		width: 100%
+	article.servicio
+		margin-bottom: 1em
+		width: 100%
+		@include media($small-screen) 
+			width: 49%
+		h3 
+			background: $color-primary
+			border-radius: 0 0 1em 1em
+			border-top: 5px solid $color-secondary
+			color: white
+			font-size: 1.2em
+			height: 4em
+			margin-bottom: 0
+
+			padding: 0.5em 1em
+			text-align: center
+			text-transform: uppercase
+			@include display(flex)
+			@include justify-content(center)
+			@include align-items(center)
+			@include media($small-screen) 
+
+			&:hover
+				background: darken($color-primary,10)
+				cursor:pointer;
+
+		.cont-txt
+			background: #eee
+			height: auto
+			overflow: hidden
+			padding: 2em 2em 1em
+			position: relative
+			top: -1em
+			width: 100%
+			z-index: -1
+			p,ul li 
+				line-height: 1.3em
+		&.is-hidden .cont-txt
+			height: 1px
+			padding: 0 2em

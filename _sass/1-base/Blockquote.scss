@@ -11,11 +11,11 @@ blockquote {
 	color: $color-primary;
 	text-align: center;
 	font-size: 1.45em;
-	&:before{
-		content: '“';
-	}&:after{
-		content: '”';
-	}
+	// &:before{
+	// 	content: '“';
+	// }&:after{
+	// 	content: '”';
+	// }
 
 	& *:last-child {
 		margin: 0;
