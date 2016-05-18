@@ -8,7 +8,7 @@ section.quienesSomos
 		overflow: hidden
 		margin: 3em auto
 		.cont-txt
-			font-size: 1em
+			font-size: 0.9em
 			line-height: 2em
 			text-align: justify
 		figure
@@ -18,14 +18,15 @@ section.quienesSomos
 				width: 100%
 
 		@include media($small-screen) 
+			max-width: 900px
 			@include display(flex)
 			.cont-txt
-				width: 100%
+				width: 90%
 				margin-right: 3em
 			figure
 				width: 90%
 	#logos
-		max-width: 1024px
+		max-width: $Mwidth
 		margin: 1em auto 3em
 		// height: 80px
 		text-align: center
@@ -35,8 +36,11 @@ section.quienesSomos
 		// position: relative
 		.logos-logo
 			display: block
+			img
+				height: 100%
 			@include media($small-screen) 
 				display: inline-block
+				height: 62px
 
 
 

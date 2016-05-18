@@ -4,49 +4,22 @@ section.multimedia
 		li.tab-header-and-content
 			a.tab-link.is-active(href='#'): h3 Imagenes
 			.tab-content
-				a(href="#seminarios").seminarios.galeria
-					img(src="assets/img/medicos.jpg", alt="")
+				a(href="#casosClinicos").galeria
+					img(src="assets/img/multimedia/casos_clinicos/CasoClinico.jpg", alt="")
 					.contxt
-						h5 Seminarios
+						h5 Casos Clinicos
 						p	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam rerum, accusamus laboriosam.
 
-				a(href="#seminarios").seminarios.galeria
-					img(src="assets/img/medicos.jpg", alt="")
+				a(href="#conferencias").galeria
+					img(src="assets/img/multimedia/conferencia/conferencia.jpg", alt="")
 					.contxt
-						h5 Seminarios
-						p	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere magni rerum quod.
-
-				a(href="#seminarios").seminarios.galeria
-					img(src="assets/img/medicos.jpg", alt="")
-					.contxt
-						h5 Seminarios
-						p	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt eum modi minus?
-
-				a(href="#seminarios").seminarios.galeria
-					img(src="assets/img/medicos.jpg", alt="")
-					.contxt
-						h5 Seminarios
-						p	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus dolore, autem vero.
-
-				a(href="#seminarios").seminarios.galeria
-					img(src="assets/img/medicos.jpg", alt="")
-					.contxt
-						h5 Seminarios
-						p	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium minima officiis sit?
+						h5 Conferencias
+						p	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam rerum, accusamus laboriosam.
 
 				.none
-					#seminarios.slider
-						h2 Seminarios
-						ul#slide-nav1.slide-nav
-							li: a(href="#"): img(src="http://loremflickr.com/200/180?random=1", alt="")
-							li: a(href="#"): img(src="http://loremflickr.com/200/120?random=2", alt="")
-							li: a(href="#"): img(src="http://loremflickr.com/200/180?random=3", alt="")
-							li: a(href="#"): img(src="http://loremflickr.com/200/180?random=4", alt="")
-						ul#slide1.slide
-							li: img(src="http://loremflickr.com/200/180?random=1", alt="")
-							li: img(src="http://loremflickr.com/200/120?random=2", alt="")
-							li: img(src="http://loremflickr.com/200/180?random=3", alt="")
-							li: img(src="http://loremflickr.com/200/180?random=4", alt="")
+					include ../_includes/galeria-casosClinicos
+					include ../_includes/galeria-conferencias
+
 			li.tab-header-and-content
 				a.tab-link(href='#'): h3 Videos
 				.tab-content

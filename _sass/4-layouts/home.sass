@@ -131,12 +131,13 @@ section.multimedia
 		box-sizing: border-box
 		display: inline-block
 		margin: 0.5em
-		max-height: 220px
-		max-width: 220px
+		height: 190px
+		width: 220px
 		overflow: hidden
 		position: relative
 		img 
-			height: 100%
+			min-width: 100%
+			max-height: 100%
 		&:after
 			background: transparentize($color-primary,0.8)
 			content: ''
@@ -192,6 +193,52 @@ section.slide
 #cboxLoadedContent
 	background: #000
 
+.slider
+	position: relative
+	text-align: center
+	h2
+		text-align: center
+		margin: 0
+		padding: 0
+		height: 48px
+		font-size: 32px
+	ul.slide-nav
+		background: darken($color-primary,10)
+		border-radius: 0.5em
+		display: block
+		height: 60px
+		list-style: none
+		margin: 0 auto
+		padding: 0 0.5em
+		width: 98%
+		>li 
+			display: inline-block
+			max-height: 60px
+			padding: 5px 2px
+			>a 
+				display: block
+				height: 50px
+				>img 
+					display: block
+					max-height: 100%
+	ul.slide
+		$height: 340px
+		height: $height
+		list-style: none
+		margin: 0 auto
+		padding: 0
+		width: 100%
+		>li 
+			display: block
+			height: $height
+			margin: 0 auto
+			padding: 0
+			width: 100%
+			>img 
+				display: block
+				height: $height
+				margin: 0 auto
+				width: auto
 
 
 
@@ -205,7 +252,7 @@ section.contactos
 		@include display(flex)
 		@include justify-content(space-around)
 		max-width: 600px
-		margin: auto
+		margin: 0 auto 2em
 		a 
 			@include display(flex)
 			@include justify-content(center)

@@ -1,8 +1,13 @@
 $(document).ready(function() {
+
   $('.servicio').addClass('is-hidden');
+
   $('.servicio').click(function(){
     $(this).toggleClass("is-hidden");
   });
+});
+
+$(document).ready(function () {
 
   $(".pictures").owlCarousel({
     loop:true,
@@ -16,7 +21,7 @@ $(document).ready(function() {
   });
 
 
-  $(".seminarios").colorbox({
+  $(".galeria").colorbox({
     inline:true,
     transition:"fade",
     Width:"50%"
@@ -24,10 +29,33 @@ $(document).ready(function() {
 
   $("#slide1").responsiveSlides({
     manualControls: '#slide-nav1',
-    autoplay:true,
+    auto: false,
     speed: 0
-
   });
+
+  $("#slide2").responsiveSlides({
+    manualControls: '#slide-nav2',
+    auto: false,
+    speed: 0
+  });
+
+  // $("#slide3").responsiveSlides({
+  //   manualControls: '#slide-nav3',
+  //   auto: false,
+  //   speed: 0
+  // });
+
+  // $("#slide4").responsiveSlides({
+  //   manualControls: '#slide-nav4',
+  //   auto: false,
+  //   speed: 0
+  // });
+
+  // $("#slide5").responsiveSlides({
+  //   manualControls: '#slide-nav5',
+  //   auto: false,
+  //   speed: 0
+  // });
  
 });
 
