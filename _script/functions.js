@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 
   $('.servicio').addClass('is-hidden');
@@ -5,6 +6,7 @@ $(document).ready(function() {
   $('.servicio').click(function(){
     $(this).toggleClass("is-hidden");
   });
+
 });
 
 $(document).ready(function () {
@@ -18,6 +20,12 @@ $(document).ready(function () {
     autoplay:true,
     autoplayHoverPause:true,
     smartSpeed:300
+  });
+
+  $(".oknav").owlCarousel({
+    nav:false,
+    dots:false,
+    autoWidth:true,
   });
 
 

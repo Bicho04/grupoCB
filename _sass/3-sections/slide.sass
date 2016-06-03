@@ -1,17 +1,15 @@
 section.slide
 	background: $color-quaternary
-	height: 350px
 	overflow: hidden
+	@include media($small-screen) 
 	.pictures
 		overflow: hidden
 		max-width: $Mwidth - 2px
 		margin: 0 auto
 	.picture
 		position: relative
-		@include media($small-screen) 
-			@include display(flex)
+		@include display(flex)
 		figure
-			height: 350px
 			margin: 0
 			padding: 0
 			width: 100%
@@ -25,12 +23,16 @@ section.slide
 		@include flex-direction(column)
 		@include justify-content(center)
 		color: $color-primary
-		height: 350px
-		font-size: 1.2em
-		padding: 2.5em 1.5em 1.5em
+		height: auto
 		position: absolute
-		width: 50%
 		z-index: 1
+		width: 70%
+		font-size: 0.7em
+		padding: 1.5em 1.5em 1.5em
+		@include media($small-screen) 
+			font-size: 1.2em
+			padding: 2.5em 1.5em 1.5em
+			width: 50%
 		&.L
 			left: 0
 		&.R
@@ -43,5 +45,4 @@ section.slide
 			display: none
 			font-size: 1em
 			font-style: italic
-			@include media($small-screen) 
-				display: block
+			display: block

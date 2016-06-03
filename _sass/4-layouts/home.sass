@@ -1,25 +1,26 @@
 header
-	height: 7em
+	// height: 7em
 	text-align: center
 	margin: 1em auto
 	max-width: $Mwidth
-	@include display(flex)
-	@include justify-content(space-between)
-	@include align-items(center)
+	@include media($small-screen) 
+		@include display(flex)
+		@include justify-content(space-between)
+		@include align-items(center)
 	.logo
 		height: 90%
 		width: auto
 		margin: 0
 		padding: 0
 	img
-		height: 100%
+		width:90%
 
 	blockquote
 		max-width: 400px
 		line-height: 1.1em
 		padding: 0
 		font-size: 1.1em
-		margin: 0
+		margin: 1em 0
 		color: $color-primary
 
 section
@@ -40,21 +41,21 @@ main
 .menu
 	height: 2.5em
 	background: darken($color-quaternary,40)
-	// .nav
-	//	max-width: $Mwidth
-	// 	display: block
-	// 	width: 100%
-	// 	height: 100%
-	// 	margin: 0 auto
+	position: relative
+	.owl-stage
+		width: $Mwidth !important
+		margin: auto
 	ul.nav
 		background: $color-primary
 		list-style: none
 		@include display(flex)
 		@include justify-content(space-around)
 		text-transform: uppercase
-		max-width: $Mwidth
+		width: $Mwidth
 		height: 2.5em
 		margin: auto
+		text-align: center
+		position: relative
 		li
 			margin: 0 
 			font-size: 1em
@@ -62,6 +63,7 @@ main
 			line-height: 2.5em
 			@include media($small-screen) 
 				font-size: 1em
+				padding: 0 0.7em
 			a
 				white-space: nowrap
 				display: block
@@ -187,7 +189,7 @@ section.multimedia
 
 
 
-
+//MUNTIMEDIA
 section.slide
 	padding-top: 0
 #cboxLoadedContent
@@ -243,15 +245,22 @@ section.slide
 
 section.cobertura
 	.seguros
-		@include display(flex)
-		@include flex-wrap(wrap)
-		@include justify-content(center)
 		max-width: $Mwidth
+		@include media($small-screen) 
+			@include display(flex)
+			@include flex-wrap(wrap)
+			@include justify-content(center)
 		margin: 0 auto
 		.seguro
-			width: 25%
+			width: 100%
 			text-align: center
-			margin: 1em 0
+			margin: 1em 0.5em
+			@include media($small-screen) 
+				width: 50%
+				margin: 1em 0
+			@include media($large-screen) 
+				width: 25%
+
 
 
 
@@ -330,20 +339,30 @@ footer
 		i
 			margin-right: 0.3em
 	ul
-		margin: 0 auto
+		margin:  auto
 		padding: 0  0
 		max-width: $Mwidth
 		list-style: none
 		@include display(flex)
+		@include flex-direction(column)
 		@include justify-content(center)
+		@include media($small-screen) 
+			@include flex-direction(row)
+
 		h4
 			color: #fff
 			font-size: 1em
+			text-align: center
 		
 		li 
-		 margin: 0 1.5em
-		 padding: 0
-		 white-space: nowrap
+			margin: 0.5em 1.5em
+			padding: 0
+			white-space: nowrap
+			@include media($small-screen) 
+				margin: 0 1.5em
+
+	.telEmail
+		margin-top: 1em
 
 	aside.fincreativo
 		background: #4F535C
