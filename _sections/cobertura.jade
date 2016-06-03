@@ -1,2 +1,25 @@
+mixin seguro(name)
+	figure.seguro: img(src="assets/img/logosSeguros/#{name}.jpg", alt="Seguro #{name}")
+
 section.cobertura
 	h2 Cobertura
+	.seguros
+		+seguro('coomecipar')
+		+seguro('salud-protegida')
+		+seguro('vero')
+		+seguro('medital')
+		+seguro('medilife')
+		+seguro('santa-librada')
+		+seguro('diben')
+		+seguro('unimed')
+		+seguro('clinicas')
+		+seguro('pastoral-social')
+
+
+
+
+
+
+
+
+
